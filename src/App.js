@@ -67,6 +67,7 @@ function App() {
 
   return (
     <div id="container">
+      <div id="title">CHI<br/>FOU<br/>MI</div>
       <Table signs={signs} />
       <Score score={score} />
       <MyHand updateSign={updateSign} />
