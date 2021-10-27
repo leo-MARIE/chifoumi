@@ -1,0 +1,62 @@
+body {
+    background-color: lightblue;
+}
+
+#container {
+    width: 70%;
+    text-align: center;
+    align-items: center;
+    border: 1px solid black;
+    margin: 7% auto 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-areas:
+    ". oppHand ."
+    ". table score"
+    ". myHand .";
+}
+
+#oppHand {
+    grid-area: oppHand;
+}
+
+#myHand {
+    grid-area: myHand;
+}
+
+#table {
+    grid-area: table;
+}
+
+#score {
+    grid-area: score;
+}
+
+#rockbutton {
+    background-image: url(./image/rock.png);
+    width: 100px;
+    height: 100px;
+}
+
+#paperbutton {
+    background-image: url(./image/paper.png);
+    width: 100px;
+    height: 100px;
+}
+
+#scissorsbutton {
+    background-image: url(./image/scissors.png);
+    width: 100px;
+    height: 100px;
+}
+
+.imageWrapper {
+    width: 100px;
+    height: 100px;
+    display: flex; /* to center */
+    margin: auto;  /* to center */
+}
+
+
+
