@@ -1,52 +1,115 @@
-body {
-    background-color: lightblue;
+@import url('https://fonts.googleapis.com/css2?family=Gluten:wght@300&family=Orbitron&display=swap');
+
+:root {
+    --color-text-primary: #4E9F3D;
+    --color-text-secondary: #D8E9A8;
+    --color-text-hover: #FFF3E4;
+    --color-border: #483434;
+    --color-glow: #D8E9A8;
+    --color-bg-primary: #191A19;
+    --color-bg-secondary: #1E5128;
+    --color-shadow: #191A19;
+  }
+
+body, html {
+    height: 100vh;
+    width: 100%;
 }
 
+body {
+    position:fixed; /* IMPORTANT prevents scroll bar due tu margin-top on h1 */
+    background: linear-gradient(135deg, var(--color-bg-primary), var(--color-bg-secondary), var(--color-bg-primary));
+    }
+
 #container {
+    font-family: 'Gluten', cursive;
+   /* font-family: 'Orbitron', sans-serif; */
+    font-size: 2em;
+    color: var(--color-text-primary);
     width: 70%;
+    height: 100vh;
     text-align: center;
     align-items: center;
-    border: 1px solid black;
-    margin: 7% auto 0 auto;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-rows: 3fr 1fr;
     grid-template-areas:
-    ". oppHand ."
     ". table score"
     ". myHand .";
 }
 
+.hand {
+    width: 40%;
+    margin: 0 auto;
+}
+
 #oppHand {
-    grid-area: oppHand;
+    background-color: transparent;
 }
 
 #myHand {
     grid-area: myHand;
+    background-color: var(--color-text-secondary);
+    color: var(--color-bg-secondary);
+    border: 10px outset var(--color-border);
+    box-shadow: 3px 4px 7px inset var(--color-shadow), 3px 4px 7px var(--color-shadow); 
+}
+
+#myHand:hover {
+    box-shadow: 0 0 10px 5px var(--color-glow), 3px 4px 7px inset var(--color-shadow), 3px 4px 7px var(--color-shadow); 
 }
 
 #table {
     grid-area: table;
+    width: 80%;
+    height: 80%;
+    margin: 0 auto;
+    background-color: var(--color-text-primary);
+    border: 10px inset var(--color-border);
+    border-radius:15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    box-shadow: /*0 0 10px 5px var(--color-glow), */3px 4px 7px inset var(--color-shadow), 3px 4px 7px var(--color-shadow); 
 }
+
 
 #score {
     grid-area: score;
 }
 
 #rockbutton {
-    background-image: url(./image/rock.png);
+    background-image: url(./image/rockdark.png);
+    width: 100px;
+    height: 100px;
+}
+
+#rockbutton:hover {
+    background-image: url(./image/rocklight.png);
     width: 100px;
     height: 100px;
 }
 
 #paperbutton {
-    background-image: url(./image/paper.png);
+    background-image: url(./image/paperdark.png);
+    width: 100px;
+    height: 100px;
+}
+#paperbutton:hover {
+    background-image: url(./image/paperlight.png);
     width: 100px;
     height: 100px;
 }
 
 #scissorsbutton {
-    background-image: url(./image/scissors.png);
+    background-image: url(./image/scissorsdark.png);
+    width: 100px;
+    height: 100px;
+}
+
+#scissorsbutton:hover {
+    background-image: url(./image/scissorslight.png);
     width: 100px;
     height: 100px;
 }
@@ -58,5 +121,12 @@ body {
     margin: auto;  /* to center */
 }
 
+.buttons {
+    background-color: transparent;
+    border: transparent;
+}
 
-
+.scoreNumber {
+    font-size: 3em;
+    color: var(--color-text-secondary);
+}

@@ -1,7 +1,6 @@
 import React from 'react';
 import { useState } from "react";
 import MyHand from './components/MyHand';
-import OppHand from './components/OppHand';
 import Table from './components/Table';
 import Score from './components/Score';
 import './styles.css';
@@ -25,14 +24,6 @@ function App() {
 
     var randomOppSign = newOppSign();               // !!! storing the values before or setScore take previous sign value
     var myEventSign = event.target.value;
-
-    console.log("event.target : " + event.target)
-    console.log("event.target.value : " + event.target.value)
-    console.log("event.currentTarget : " + event.currentTarget)
-    console.log("event.currentTarget.value : " + event.currentTarget.value)
-    console.log("myEventSign : " + myEventSign)
-
-  
 
     setSigns(() => {
       return { mySign: myEventSign, oppSign: randomOppSign }
@@ -76,7 +67,6 @@ function App() {
 
   return (
     <div id="container">
-      <OppHand />
       <Table signs={signs} />
       <Score score={score} />
       <MyHand updateSign={updateSign} />
