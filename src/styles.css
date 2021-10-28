@@ -39,8 +39,9 @@ body {
     "title myHand .";
 }
 
-@media only screen and (max-width: 600px) { /* for mobile screen */
+@media only screen and (max-width: 720px) { /* for mobile screen */
     #container {
+        width: 95%;
         grid-template-columns: 1fr;
         grid-template-rows: 2fr 1fr 1fr;
         grid-template-areas:
@@ -51,10 +52,13 @@ body {
     #title {
         display: none;
     }
+    .imageWrapper {
+        padding: 0%;
+    }
 }
 
 .hand {
-    width: max(50%, 200px); /* responsive */
+    width: max(50%, 220px); /* responsive */
     margin: 0 auto;
     display: flex;
     justify-content: space-around;
@@ -68,6 +72,7 @@ body {
 #myHand {
     grid-area: myHand;
     align-self: start;
+    justify-self: center;
     background-color: var(--color-text-secondary);
     color: var(--color-bg-secondary);
     border: 10px outset var(--color-border);
@@ -125,6 +130,7 @@ body {
     height: max(10vw, 100px); /* responsive */
     display: flex; /* to center */
     margin: 0 auto;  /* to center */
+    padding: 7%;
 }
 
 .buttons {
@@ -136,7 +142,7 @@ body {
 }
 
 .scoreNumber {
-    font-size: max(3vw, 1.7em); /* responsive */
+    font-size: max(3vw, 1.4em); /* responsive */
     color: var(--color-text-secondary);
 }
 

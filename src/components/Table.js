@@ -29,9 +29,6 @@ if(props.signs.mySign === "rock") {
         <div className="imageWrapper">
           {oppImage}
         </div>
-        <br/>
-        <br/>
-        <br/>
         <div className="imageWrapper">
           {myImage}
         </div>
