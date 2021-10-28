@@ -5,12 +5,9 @@ function Score(props) {
 <div id="score">
     <div>Computer Score : </div>
     <br/>
-    <br/>
     <div className="scoreNumber">{props.score.oppScore}</div>
     <br/>
-    <br/>
     <div>Your Score : </div>
-    <br/>
     <br/>
     <div className="scoreNumber">{props.score.myScore}</div>
 </div>

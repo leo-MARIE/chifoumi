@@ -24,7 +24,7 @@ body {
 #container {
     font-family: 'Gluten', cursive;
    /* font-family: 'Orbitron', sans-serif; */
-    font-size: 2em;
+    font-size: max(1.7vw, 1.1em); /* responsive */
     color: var(--color-text-primary);
     width: 80%;
     height: 100vh;
@@ -39,8 +39,22 @@ body {
     "title myHand .";
 }
 
+@media only screen and (max-width: 600px) { /* for mobile screen */
+    #container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr 1fr 1fr;
+        grid-template-areas:
+        "table"
+        "score"
+        "myHand";
+    }
+    #title {
+        display: none;
+    }
+}
+
 .hand {
-    width: 50%;
+    width: max(50%, 200px); /* responsive */
     margin: 0 auto;
     display: flex;
     justify-content: space-around;
@@ -85,42 +99,30 @@ body {
 
 #rockbutton {
     background-image: url(./image/rockdark.png);
-    width: 100px;
-    height: 100px;
 }
 
 #rockbutton:hover {
     background-image: url(./image/rocklight.png);
-    width: 100px;
-    height: 100px;
 }
 
 #paperbutton {
     background-image: url(./image/paperdark.png);
-    width: 100px;
-    height: 100px;
 }
 #paperbutton:hover {
     background-image: url(./image/paperlight.png);
-    width: 100px;
-    height: 100px;
 }
 
 #scissorsbutton {
     background-image: url(./image/scissorsdark.png);
-    width: 100px;
-    height: 100px;
 }
 
 #scissorsbutton:hover {
     background-image: url(./image/scissorslight.png);
-    width: 100px;
-    height: 100px;
 }
 
 .imageWrapper {
-    width: 200px;
-    height: 200px;
+    width: max(10vw, 100px); /* responsive */
+    height: max(10vw, 100px); /* responsive */
     display: flex; /* to center */
     margin: 0 auto;  /* to center */
 }
@@ -128,15 +130,19 @@ body {
 .buttons {
     background-color: transparent;
     border: transparent;
+    width: max(5vw, 50px); /* responsive */
+    height: max(5vw, 50px); /* responsive */
+    background-size: max(5vw, 50px) max(5vw, 50px); /* responsive */
 }
 
 .scoreNumber {
-    font-size: 3em;
+    font-size: max(3vw, 1.7em); /* responsive */
     color: var(--color-text-secondary);
 }
 
 #title {
     grid-area: title;
-    font-size: 5em;
+    /*font-size: 5em;*/
+    font-size: 8vw; /*new*/
     margin-bottom: 60%;
 }
