@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/chifoumi/static/css/main.1675e38c.chunk.css",
-    "main.js": "/chifoumi/static/js/main.9271b2b4.chunk.js",
-    "main.js.map": "/chifoumi/static/js/main.9271b2b4.chunk.js.map",
+    "main.css": "/chifoumi/static/css/main.176acfde.chunk.css",
+    "main.js": "/chifoumi/static/js/main.f3ef7f38.chunk.js",
+    "main.js.map": "/chifoumi/static/js/main.f3ef7f38.chunk.js.map",
     "runtime-main.js": "/chifoumi/static/js/runtime-main.02c67ee6.js",
     "runtime-main.js.map": "/chifoumi/static/js/runtime-main.02c67ee6.js.map",
     "static/js/2.dd7c773a.chunk.js": "/chifoumi/static/js/2.dd7c773a.chunk.js",
     "static/js/2.dd7c773a.chunk.js.map": "/chifoumi/static/js/2.dd7c773a.chunk.js.map",
     "index.html": "/chifoumi/index.html",
-    "static/css/main.1675e38c.chunk.css.map": "/chifoumi/static/css/main.1675e38c.chunk.css.map",
+    "static/css/main.176acfde.chunk.css.map": "/chifoumi/static/css/main.176acfde.chunk.css.map",
     "static/js/2.dd7c773a.chunk.js.LICENSE.txt": "/chifoumi/static/js/2.dd7c773a.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.02c67ee6.js",
     "static/js/2.dd7c773a.chunk.js",
-    "static/css/main.1675e38c.chunk.css",
-    "static/js/main.9271b2b4.chunk.js"
+    "static/css/main.176acfde.chunk.css",
+    "static/js/main.f3ef7f38.chunk.js"
   ]
 }
