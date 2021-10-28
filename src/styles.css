@@ -40,8 +40,11 @@ body {
 }
 
 .hand {
-    width: 40%;
+    width: 50%;
     margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    padding: 1% 0;
 }
 
 #oppHand {
@@ -50,6 +53,7 @@ body {
 
 #myHand {
     grid-area: myHand;
+    align-self: start;
     background-color: var(--color-text-secondary);
     color: var(--color-bg-secondary);
     border: 10px outset var(--color-border);
@@ -115,10 +119,10 @@ body {
 }
 
 .imageWrapper {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     display: flex; /* to center */
-    margin: auto;  /* to center */
+    margin: 0 auto;  /* to center */
 }
 
 .buttons {
