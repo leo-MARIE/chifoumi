@@ -24,18 +24,26 @@ function App() {
 
     var randomOppSign = newOppSign();               // !!! storing the values before or setScore take previous sign value
     var myEventSign = event.target.value;
-
+    
     setSigns(() => {
-      return { mySign: myEventSign, oppSign: randomOppSign }
+      return { mySign: "", oppSign: "" }
     }); // set Signs
-   
-    setScore((previousState) => {
-      if(whoWin(myEventSign, randomOppSign) === "win") {
-        return { ...previousState, myScore: previousState.myScore + 1}
-      } else if(whoWin(myEventSign, randomOppSign) === "lose") {
-        return { ...previousState, oppScore: previousState.oppScore + 1}
-      } else {return { ...previousState}}
-    }); // set Score       
+
+    setTimeout( () => {
+
+      setSigns(() => {
+        return { mySign: myEventSign, oppSign: randomOppSign }
+      }); // set Signs
+    
+      setScore((previousState) => {
+        if(whoWin(myEventSign, randomOppSign) === "win") {
+          return { ...previousState, myScore: previousState.myScore + 1}
+        } else if(whoWin(myEventSign, randomOppSign) === "lose") {
+          return { ...previousState, oppScore: previousState.oppScore + 1}
+        } else {return { ...previousState}}
+      }); // set Score       
+
+  }, 100); // setTimeOut
   } // update sign
 
   
